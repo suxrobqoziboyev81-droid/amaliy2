@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dasturlash atamalari lug'atiga yangi atama qo'shish va IT o'quv kurslariga yozilish formasi.">
+    <title>Aloqa va Ro'yxatdan O'tish | Dasturlash Atamalari Lug'ati</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="yuqori">
+    <header class="sayt-sarlavha">
+        <div class="konteyner">
+            <h1>Aloqa va Kursga Ro'yxatdan O'tish</h1>
+            <p class="sarlavha-ost">Lug'at bazasiga yangi atama taklif qiling yoki IT o'quv guruhlariga onlayn yoziling</p>
+        </div>
+    </header>
+
+    <nav class="asosiy-menyu">
+        <a href="index.html" class="brend-nomi">IT Lug'at &middot; UrDU</a>
+        <ul>
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="batafsil.html">Batafsil ma'lumot</a></li>
+            <li><a href="aloqa.html" class="faol">Aloqa va ro'yxatdan o'tish</a></li>
+        </ul>
+    </nav>
+
+    <main class="konteyner">
+        <section>
+            <h2>O'quv guruhiga yozilish va atama yuborish arizasi</h2>
+            <p>Quyidagi formani to'ldirish orqali Urganch davlat universiteti qoshidagi dasturlash to'garagiga ro'yxatdan o'tishingiz yoki lug'atimizga yangi atama kiritish bo'yicha taklif qoldirishingiz mumkin.</p>
+
+            <div class="forma-karta">
+                <form action="#" method="post" class="ariza-forma">
+                    <div class="forma-ikkilik">
+                        <!-- 1-maydon: text -->
+                        <div class="forma-guruh">
+                            <label for="ism">1. To'liq ism-sharifingiz (F.I.Sh.): *</label>
+                            <input type="text" id="ism" name="talaba_ismi" placeholder="Masalan: Suxrob Qo'ziboyev" required>
+                        </div>
+
+                        <!-- 2-maydon: email -->
+                        <div class="forma-guruh">
+                            <label for="pochta">2. Elektron pochta manzilingiz: *</label>
+                            <input type="email" id="pochta" name="elektron_pochta" placeholder="talaba@urdu.uz" required>
+                        </div>
+                    </div>
+
+                    <div class="forma-ikkilik">
+                        <!-- 3-maydon: tel + pattern -->
+                        <div class="forma-guruh">
+                            <label for="telefon">3. Telefon raqamingiz (+998XXXXXXXXX): *</label>
+                            <input type="tel" id="telefon" name="telefon_raqami" pattern="\+998[0-9]{9}" placeholder="+998991234567" title="Telefon raqamni +998991234567 formatida kiriting" required>
+                        </div>
+
+                        <!-- 4-maydon: number -->
+                        <div class="forma-guruh">
+                            <label for="bosqich">4. O'qiyotgan bosqichingiz (kurs: 1&ndash;4): *</label>
+                            <input type="number" id="bosqich" name="talaba_bosqichi" min="1" max="4" value="2" required>
+                        </div>
+                    </div>
+
+                    <div class="forma-ikkilik">
+                        <!-- 5-maydon: date -->
+                        <div class="forma-guruh">
+                            <label for="sana">5. Mashg'ulotlarni boshlash uchun qulay sana: *</label>
+                            <input type="date" id="sana" name="boshlash_sanasi" required>
+                        </div>
+
+                        <!-- 6-maydon: select -->
+                        <div class="forma-guruh">
+                            <label for="yonalish">6. Dasturlash yo'nalishini tanlang:</label>
+                            <select id="yonalish" name="tanlangan_yonalish">
+                                <option value="frontend">Frontend (HTML5, CSS3, Flexbox, JavaScript)</option>
+                                <option value="backend_python">Backend (Python va Django freymvorki)</option>
+                                <option value="backend_java">Korporativ dasturlash (Java va Spring Boot)</option>
+                                <option value="database_sql">Ma'lumotlar bazasi (PostgreSQL)</option>
+                                <option value="atama_taklifi">Faqat lug'atga yangi atama taklif qilish</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 7-maydon: radio guruh fieldset + legend ichida -->
+                    <fieldset>
+                        <legend>7. Dasturlash bo'yicha hozirgi bilim darajangiz:</legend>
+                        <div class="tanlov-qatori">
+                            <div class="tanlov-band">
+                                <input type="radio" id="daraja_boshlangich" name="bilim_darajasi" value="boshlangich" checked>
+                                <label for="daraja_boshlangich">Boshlang'ich (Endi o'rganyapman)</label>
+                            </div>
+                            <div class="tanlov-band">
+                                <input type="radio" id="daraja_orta" name="bilim_darajasi" value="orta">
+                                <label for="daraja_orta">O'rta (Asosiy tushunchalarni bilaman)</label>
+                            </div>
+                            <div class="tanlov-band">
+                                <input type="radio" id="daraja_yuqori" name="bilim_darajasi" value="yuqori">
+                                <label for="daraja_yuqori">Yuqori (Mustaqil loyiha qila olaman)</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- 8-maydon: textarea -->
+                    <div class="forma-guruh">
+                        <label for="xabar">8. Taklif etilayotgan atama izohi yoki qo'shimcha savolingiz: *</label>
+                        <textarea id="xabar" name="atama_yoki_savol" rows="4" placeholder="Lug'atga qo'shmoqchi bo'lgan atamangiz va uning o'zbekcha ta'rifini yozing..." required></textarea>
+                    </div>
+
+                    <!-- 9-maydon: checkbox -->
+                    <div class="forma-guruh">
+                        <div class="tanlov-band">
+                            <input type="checkbox" id="obuna" name="haftalik_obuna" value="ha" checked>
+                            <label for="obuna">Haftalik yangi dasturlash atamalari to'plamini elektron pochtaga olishni xohlayman</label>
+                        </div>
+                        <div class="tanlov-band">
+                            <input type="checkbox" id="rozilik" name="qoidalar_roziligi" value="rozi" required>
+                            <label for="rozilik">Kiritilgan ma'lumotlarning to'g'riligini tasdiqlayman va loyiha qoidalariga roziman *</label>
+                        </div>
+                    </div>
+
+                    <button type="submit">Arizani yuborish</button>
+                </form>
+            </div>
+        </section>
+
+        <aside class="yon-eslatma">
+            <h3>Maslahat va qabul vaqtlari</h3>
+            <p>Ariza yuborilgandan so'ng 24 soat ichida mutaxassislarimiz siz bilan bog'lanadi. Kafedra qabul vaqti: Dushanbadan Shanbagacha soat 09:00 dan 17:00 gacha.</p>
+        </aside>
+
+        <section>
+            <h2>Tezkor aloqa kartalari</h2>
+            <div class="kartalar-qatori">
+                <article class="karta">
+                    <span class="karta-belgi kok">Kafedra</span>
+                    <h3>Dasturiy injiniring kafedrasi</h3>
+                    <p>Urganch shahri, Hamid Olimjon ko'chasi, 14-uy, Axborot texnologiyalari fakulteti binosi, 3-qavat.</p>
+                </article>
+
+                <article class="karta">
+                    <span class="karta-belgi yashil">24/7 Online</span>
+                    <h3>Texnik qo'llab-quvvatlash</h3>
+                    <p>Savol va takliflar uchun elektron pochta: <a href="mailto:info@urdu.uz">info@urdu.uz</a> yoki telefon: <a href="tel:+998991234567">+998 99 123 45 67</a>.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer id="aloqa">
+        <div class="konteyner">
+            <div class="footer-ustunlar">
+                <div class="footer-ustun">
+                    <h3>Loyiha haqida</h3>
+                    <p>Dasturlash atamalari lug'ati &mdash; o'zbek tilidagi zamonaviy dasturlash ensiklopediyasi.</p>
+                </div>
+                <div class="footer-ustun">
+                    <h3>Tezkor sahifalar</h3>
+                    <p><a href="index.html">Bosh sahifa</a> &middot; <a href="batafsil.html">Loyiha haqida</a> &middot; <a href="aloqa.html">Ro'yxatdan o'tish</a></p>
+                    <p>Manzil: Urganch shahri, Xorazm viloyati.</p>
+                </div>
+                <div class="footer-ustun">
+                    <h3>Biz bilan bog'lanish</h3>
+                    <p>Elektron pochta: <a href="mailto:info@urdu.uz">info@urdu.uz</a></p>
+                    <p>Telefon: <a href="tel:+998991234567">+998 99 123 45 67</a></p>
+                </div>
+            </div>
+            <div class="footer-pastki">
+                <p>&copy; 2026 Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#yuqori" class="yuqoriga-tugma">&uarr; Yuqoriga</a>
+</body>
+</html>
